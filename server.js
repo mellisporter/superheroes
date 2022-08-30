@@ -8,3 +8,9 @@ const port = 4444;
 app.listen(port, function(req, res){
     console.log("Here to save the city.")
 })
+
+const superheroes = ["Superman" , "Wonder Woman", "Black Panther"];
+
+app.get("/superheroes", function (req, res){
+    res.send(superheroes)
+})
