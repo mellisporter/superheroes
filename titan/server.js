@@ -27,6 +27,18 @@ const titan = [
     },
 ]
 
+// index route
 app.get("/titan", function(req,res){
     res.send(titan)
+})
+
+app.get("/titan/:indexOfTitan", function(req, res){
+    let info = req.params.indexOfTitan;
+    res.send(`<h1>${titan[info].name}</h1><br><ul><li>Location: ${titan[info].location}</li>
+    <li>Eye Color: ${titan[info].eyeColor}</li><li>Hair Color: ${titan[info].hairColor}</li></ul><style>
+    body {
+        background-image: url("https://images7.alphacoders.com/418/418724.png");
+        color: white;
+    }
+    </style>`)
 })
