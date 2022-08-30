@@ -48,7 +48,7 @@ app.get("/superheroes", function (req, res) {
 
 // show route
 app.get("/superheroes/:index", function (req, res) {
-    res.send(`<h1>${superheroes[req.params.index].name}</h1> <br> <ul><li>${superheroes[req.params.index].powers[0]}</li><li>${superheroes[req.params.index].powers[1]}</li><li>${superheroes[req.params.index].powers[2]}</li></ul>`)
+    res.send(`<h1>${superheroes[req.params.index].name}</h1> <br> <ul><li>${superheroes[req.params.index].powers[0]}</li><li>${superheroes[req.params.index].powers[1]}</li><li>${superheroes[req.params.index].powers[2]}</li></ul><br><h1>${villains[req.params.index].name}</h1> <br> <ul><li>${villains[req.params.index].powers[0]}</li><li>${villains[req.params.index].powers[1]}</li><li>${villains[req.params.index].powers[2]}</li></ul>`)
 })
 
 // show route
