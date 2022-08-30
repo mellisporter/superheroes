@@ -27,7 +27,7 @@ const superheroes = [
 const villains = [
     {
         name: "Lex Luthor",
-        powers: ["super brain"],
+        powers: ["super brain", "huge nerd"],
     },
     {
         name: "Ares",
@@ -55,4 +55,8 @@ app.get("/superheroes/:index", function (req, res) {
 
 app.get("/villains", function (req, res){
     res.send(villains);
+})
+
+app.get("/villains/:indexOfVillains", function (req, res) {
+    res.send(`<h1>${villains[req.params.indexOfVillains].name}</h1> <br> <ul><li>${villains[req.params.indexOfVillains].powers[0]}</li><li>${villains[req.params.indexOfVillains].powers[1]}</li><li>${villains[req.params.indexOfVillains].powers[2]}</li></ul>`)
 })
