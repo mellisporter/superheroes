@@ -48,7 +48,15 @@ app.get("/superheroes", function (req, res) {
 
 // show route
 app.get("/superheroes/:index", function (req, res) {
-    res.send(`<h1>${superheroes[req.params.index].name}</h1> <br> <ul><li>${superheroes[req.params.index].powers[0]}</li><li>${superheroes[req.params.index].powers[1]}</li><li>${superheroes[req.params.index].powers[2]}</li></ul><br><h1>${villains[req.params.index].name}</h1> <br> <ul><li>${villains[req.params.index].powers[0]}</li><li>${villains[req.params.index].powers[1]}</li><li>${villains[req.params.index].powers[2]}</li></ul>`)
+    res.send(`<h1>${superheroes[req.params.index].name}</h1> <br> 
+    <ul><li>${superheroes[req.params.index].powers[0]}</li><li>${superheroes[req.params.index].powers[1]}</li><li>${superheroes[req.params.index].powers[2]}</li></ul><br>
+    <h1>${villains[req.params.index].name}</h1> <br> <ul><li>${villains[req.params.index].powers[0]}</li><li>${villains[req.params.index].powers[1]}</li><li>${villains[req.params.index].powers[2]}</li></ul>
+    <style>
+    body {
+        background-image: url("https://media.istockphoto.com/vectors/heroes-and-villains-vector-id470746907?k=20&m=470746907&s=612x612&w=0&h=gsQMr2dkCHch7u1qjnubJ5eSvYQ4tSUD9QdOoRo1QkU=");
+        color: white;
+    }
+    </style>`)
 })
 
 // show route
@@ -58,5 +66,12 @@ app.get("/villains", function (req, res){
 })
 
 app.get("/villains/:indexOfVillains", function (req, res) {
-    res.send(`<h1>${villains[req.params.indexOfVillains].name}</h1> <br> <ul><li>${villains[req.params.indexOfVillains].powers[0]}</li><li>${villains[req.params.indexOfVillains].powers[1]}</li><li>${villains[req.params.indexOfVillains].powers[2]}</li></ul>`)
+    res.send(`<h1>${villains[req.params.indexOfVillains].name}</h1> <br> 
+    <ul><li>${villains[req.params.indexOfVillains].powers[0]}</li><li>${villains[req.params.indexOfVillains].powers[1]}</li><li>${villains[req.params.indexOfVillains].powers[2]}</li></ul>
+    <style>
+    body {
+        background-image: url("https://media.istockphoto.com/vectors/heroes-and-villains-vector-id470746907?k=20&m=470746907&s=612x612&w=0&h=gsQMr2dkCHch7u1qjnubJ5eSvYQ4tSUD9QdOoRo1QkU=");
+        color: white;
+    }
+    </style>`)
 })
