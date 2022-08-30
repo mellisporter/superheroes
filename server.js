@@ -14,3 +14,7 @@ const superheroes = ["Superman" , "Wonder Woman", "Black Panther"];
 app.get("/superheroes", function (req, res){
     res.send(superheroes)
 })
+
+app.get("/superheroes/:index", function (req, res){
+    res.send(superheroes[req.params.index])
+})
